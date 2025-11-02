@@ -1,0 +1,11 @@
+tensorflow-cpu==2.20.0
+keras==3.10.0
+imutils==0.5.3
+numpy==1.26.4
+opencv-python==4.10.0.84
+matplotlib==3.9.2
+argparse==1.1
+scipy==1.13.1
+flask
+flask-cors
+gunicorn

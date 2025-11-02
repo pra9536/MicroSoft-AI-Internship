@@ -1,0 +1,99 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #eef2f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full screen perfect centering */
+.container {
+  position: fixed;            /* Fix to viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect center both sides */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Title styling */
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Webcam video */
+video {
+  width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.retry {
+  background-color: #e74c3c;
+}
+
+.retry:hover {
+  background-color: #c0392b;
+}
+
+/* Result text */
+.result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.mask {
+  color: #27ae60;
+}
+
+.no-mask {
+  color: #e74c3c;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Group buttons neatly */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
