@@ -13,7 +13,7 @@ const WebcamCapture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
 
     if (!imageSrc) {
-      setError("❗ Camera not ready. Please try again.");
+      setError("Camera not ready. Please try again.");
       return;
     }
 
@@ -22,11 +22,12 @@ const WebcamCapture = () => {
     setLabel("");
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:5000/predict",
-        { image: imageSrc },
-        { timeout: 5000 } // 5 seconds timeout
-      );
+    const response = await axios.post(
+  "https://face-mask-detector-cb0p.onrender.com/predict",
+  { image: imageSrc },
+  { timeout: 30000 }
+);
+
 
       setLabel(response.data.label);
     } catch (err) {
@@ -62,14 +63,14 @@ const WebcamCapture = () => {
 
         {error && (
           <button className="btn retry" onClick={captureAndPredict}>
-            🔁 Retry
+            Retry
           </button>
         )}
       </div>
 
       {label && (
         <h2 className={`result ${label === "Mask" ? "mask" : "no-mask"}`}>
-          {label === "Mask" ? "✅ Mask Detected" : "❌ No Mask Detected"}
+          {label === "Mask" ? "Mask Detected" : "No Mask Detected"}
         </h2>
       )}
 
