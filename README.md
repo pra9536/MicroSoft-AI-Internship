@@ -76,6 +76,7 @@ python test.py
 - **Prateek Yadav**
 - GitHub: https://github.com/pra9536/MicroSoft-AI-Internship
 - Email:  prateek9530@gmail.com
+- Live Link: https://690a7056cce3c4bfae63b4a9--magnificent-starlight-a3d145.netlify.app/
 
 ---
 
